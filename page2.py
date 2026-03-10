@@ -11,7 +11,7 @@ currency = game.currency
 
 # Buttons
 pull1_button = pygame.Rect(250, 750, 120, 60)
-pull10_button = pygame.Rect(430, 750, 140, 60)
+pull3_button = pygame.Rect(430, 750, 140, 60)
 
 rightpage_button = pygame.Rect(750, 400, 50, 50)
 leftpage_button = pygame.Rect(0, 400, 50, 50)
@@ -38,10 +38,10 @@ def handle_events():
                     game.currency -= 10
                     print("Single pull")
 
-            if pull10_button.collidepoint(event.pos):
-                if game.currency >= 100:
-                    game.currency -= 100
-                    print("Ten pull")
+            if pull3_button.collidepoint(event.pos):
+                if game.currency >= 30:
+                    game.currency -= 30
+                    print("Three pull")
 
             if rightpage_button.collidepoint(event.pos):
                 if current_page < total_pages - 1:
@@ -70,13 +70,13 @@ def draw(screen):
     # Creacion botones Pull
         # Color
     pygame.draw.rect(screen, (200, 180, 50), pull1_button)
-    pygame.draw.rect(screen, (200, 180, 50), pull10_button)
+    pygame.draw.rect(screen, (200, 180, 50), pull3_button)
         # Texto
     pull1_text = small_font.render("Pull x1", True, (0, 0, 0))
-    pull10_text = small_font.render("Pull x10", True, (0, 0, 0))
+    pull3_text = small_font.render("Pull x3", True, (0, 0, 0))
         # Posicion texto
     screen.blit(pull1_text, (275, 770))
-    screen.blit(pull10_text, (460, 770))
+    screen.blit(pull3_text, (460, 770))
 
     # Creacion botones Pagina
         # Color

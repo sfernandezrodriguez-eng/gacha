@@ -35,10 +35,24 @@ def handle_events():
 
         if event.type == pygame.MOUSEBUTTONDOWN:
 
+            if page2.pull1_button.collidepoint(event.pos):
+                if game.currency >= 10:
+                    game.currency -= 10
+                    print("Single pull")
+                    print(game.currency)
+
+
+            if page2.pull3_button.collidepoint(event.pos):
+                if game.currency >= 30:
+                    game.currency -= 30
+                    print("Three pull")
+                    print(game.currency)
+
             if page2.rightpage_button.collidepoint(event.pos):
                 if current_page < total_pages:
                     current_page += 1
                     print("Right page")
+
 
             if page2.leftpage_button.collidepoint(event.pos):
                 if current_page > 1:
