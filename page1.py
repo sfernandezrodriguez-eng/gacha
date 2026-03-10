@@ -7,6 +7,10 @@ big_font = pygame.font.Font(None, 50)
 font = pygame.font.Font(None, 40)
 small_font = pygame.font.Font(None, 30)
 
+def handle_events(event, game):
+    pass
+
+
 def draw(screen, game):
 
     screen.fill((90, 90, 100))

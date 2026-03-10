@@ -7,6 +7,9 @@ small_font = pygame.font.Font(None, 30)
 
 leftpage_button = pygame.Rect(0, 400, 50, 50)
 
+def handle_events(event, game):
+    pass
+
 def draw(screen, game):
 
     screen.fill((120, 120, 130))

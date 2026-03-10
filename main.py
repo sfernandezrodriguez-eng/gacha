@@ -13,17 +13,13 @@ HEIGHT = 900
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Gacha Casal")
 
-big_font = pygame.font.Font(None, 50)
-font = pygame.font.Font(None, 40)
-small_font = pygame.font.Font(None, 30)
-
 clock = pygame.time.Clock()
 
 game = Game()
 
 running = True
 current_page = 2
-
+total_pages = 4
 
 def handle_events():
     global running, current_page
@@ -33,73 +29,45 @@ def handle_events():
         if event.type == pygame.QUIT:
             running = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.type == pygame.KEYDOWN:
 
-            '''if current_page == 2:  # solo en la página 2
-                if page2.pull1_button.collidepoint(event.pos):
-                    if game.currency >= 10:
-                        game.currency -= 10
-                        print("Single pull! Money left:", game.currency)
-
-                if page2.pull3_button.collidepoint(event.pos):
-                    if game.currency >= 30:
-                        game.currency -= 30
-                        print("Triple pull! Money left:", game.currency)'''
-
-            if page2.rightpage_button.collidepoint(event.pos):
-                if current_page < 4:
+            if event.key == pygame.K_RIGHT:
+                if current_page < total_pages:
                     current_page += 1
-                    print("Right page")
 
-
-            if page2.leftpage_button.collidepoint(event.pos):
+            if event.key == pygame.K_LEFT:
                 if current_page > 1:
                     current_page -= 1
-                    print("Left page")
+
+        # eventos propios de cada página
+        if current_page == 1:
+            page1.handle_events(event, game)
+
+        elif current_page == 2:
+            page2.handle_events(event, game)
+
+        elif current_page == 3:
+            page3.handle_events(event, game)
+
+        elif current_page == 4:
+            page4.handle_events(event, game)
 
 
 while running:
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-        if current_page == 1:
-            page1.handle_events(event, game)
-        elif current_page == 2:
-            page2.handle_events(event, game)
-        elif current_page == 3:
-            page3.handle_events(event, game)
-        elif current_page == 4:
-            page4.handle_events(event, game)
+    handle_events()
 
     if current_page == 1:
         page1.draw(screen, game)
+
     elif current_page == 2:
         page2.draw(screen, game)
+
     elif current_page == 3:
         page3.draw(screen, game)
+
     elif current_page == 4:
         page4.draw(screen, game)
-
-    if event.type == pygame.MOUSEBUTTONDOWN:
-        # Botones de page2
-        if current_page == 2:
-            if page2.rightpage_button.collidepoint(event.pos):
-                if current_page < 4:
-                    current_page += 1
-            if page2.leftpage_button.collidepoint(event.pos):
-                if current_page > 1:
-                    current_page -= 1
-
-        # Botones de page3
-        if current_page == 3:
-            if page3.rightpage_button.collidepoint(event.pos):
-                if current_page < 4:
-                    current_page += 1
-            if page3.leftpage_button.collidepoint(event.pos):
-                if current_page > 1:
-                    current_page -= 1
 
     pygame.display.update()
     clock.tick(60)

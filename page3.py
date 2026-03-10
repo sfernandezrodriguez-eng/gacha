@@ -13,29 +13,12 @@ leftpage_button = pygame.Rect(0, 400, 50, 50)
 
 # Game loop control
 running = True
-current_page = 1
-total_pages = 3
+current_page = 3
 
 
 
-def handle_events():
-    global running, currency, current_page
-
-    for event in pygame.event.get():
-
-        if event.type == pygame.QUIT:
-            running = False
-
-        if event.type == pygame.MOUSEBUTTONDOWN:
-
-            if rightpage_button.collidepoint(event.pos):
-                if current_page < total_pages - 1:
-                    current_page += 1
-                    print("Right page")
-            if leftpage_button.collidepoint(event.pos):
-                if current_page >= 0:
-                    current_page -= 1
-                    print("Left page")
+def handle_events(event, game):
+    pass
 
 def draw(screen, game):
 

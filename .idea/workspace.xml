@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9b1f197-bf7e-4e1e-b86a-607301cab0e2" name="Changes" comment="pantalla en negro">
+    <list default="true" id="a9b1f197-bf7e-4e1e-b86a-607301cab0e2" name="Changes" comment="crashea al cambiar de pagina">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page1.py" beforeDir="false" afterPath="$PROJECT_DIR$/page1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page2.py" beforeDir="false" afterPath="$PROJECT_DIR$/page2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page3.py" beforeDir="false" afterPath="$PROJECT_DIR$/page3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page4.py" beforeDir="false" afterPath="$PROJECT_DIR$/page4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,13 +131,22 @@
       <option name="project" value="LOCAL" />
       <updated>1773146427506</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="crashea al cambiar de pagina">
+      <option name="closed" value="true" />
+      <created>1773146926291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773146926291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio, creacion de 4 paginas, y botones para moverse entre ellas" />
     <MESSAGE value="contador de dinero no baja" />
     <MESSAGE value="pantalla en negro" />
-    <option name="LAST_COMMIT_MESSAGE" value="pantalla en negro" />
+    <MESSAGE value="crashea al cambiar de pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="crashea al cambiar de pagina" />
   </component>
 </project>
