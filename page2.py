@@ -1,13 +1,6 @@
 import pygame
-from stats import game
 
-# Fonts
-big_font = pygame.font.Font(None, 50)
-font = pygame.font.Font(None, 40)
-small_font = pygame.font.Font(None, 30)
 
-# Player data
-currency = game.currency
 
 # Buttons
 pull1_button = pygame.Rect(250, 750, 120, 60)
@@ -16,43 +9,12 @@ pull3_button = pygame.Rect(430, 750, 140, 60)
 rightpage_button = pygame.Rect(750, 400, 50, 50)
 leftpage_button = pygame.Rect(0, 400, 50, 50)
 
-# Game loop control
-running = True
-current_page = 1
-total_pages = 3
 
-
-
-def handle_events():
-    global running, currency, current_page
-
-    for event in pygame.event.get():
-
-        if event.type == pygame.QUIT:
-            running = False
-
-        if event.type == pygame.MOUSEBUTTONDOWN:
-
-            if pull1_button.collidepoint(event.pos):
-                if game.currency >= 10:
-                    game.currency -= 10
-                    print("Single pull")
-
-            if pull3_button.collidepoint(event.pos):
-                if game.currency >= 30:
-                    game.currency -= 30
-                    print("Three pull")
-
-            if rightpage_button.collidepoint(event.pos):
-                if current_page < total_pages - 1:
-                    current_page += 1
-                    print("Right page")
-            if leftpage_button.collidepoint(event.pos):
-                if current_page >= 0:
-                    current_page -= 1
-                    print("Left page")
-
-def draw(screen):
+def draw(screen, game):
+    # Fonts
+    big_font = pygame.font.Font(None, 50)
+    font = pygame.font.Font(None, 40)
+    small_font = pygame.font.Font(None, 30)
 
     screen.fill((30, 30, 40))
 
@@ -91,8 +53,20 @@ def draw(screen):
 
     # Dinero
         # Color
-    currency_text = small_font.render(f"Money: {game.currency}", True, (255, 255, 255))
-        # Posicion texto
-    screen.blit(currency_text, (20, 20))
+    money_text = small_font.render(f"Money: {game.currency}", True, (255,255,255))
+        #Posicion texto
+    screen.blit(money_text, (20, 20))
 
+def handle_events(event, game):
+
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        if pull1_button.collidepoint(event.pos):
+            if game.currency >= 10:
+                game.currency -= 10
+                print("Single pull!")
+
+        if pull3_button.collidepoint(event.pos):
+            if game.currency >= 30:
+                game.currency -= 30
+                print("Triple pull!")
 

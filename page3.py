@@ -1,13 +1,10 @@
 import pygame
-from stats import game
 
 # Fonts
 big_font = pygame.font.Font(None, 50)
 font = pygame.font.Font(None, 40)
 small_font = pygame.font.Font(None, 30)
 
-# Player data
-currency = game.currency
 
 # Buttons
 
@@ -40,7 +37,7 @@ def handle_events():
                     current_page -= 1
                     print("Left page")
 
-def draw(screen):
+def draw(screen, game):
 
     screen.fill((60, 60, 70))
 
