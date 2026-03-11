@@ -1,8 +1,13 @@
 {
     "rarities": {
-        "R": 70,
-        "SR": 25,
-        "SSR": 5
+        "C" : 700,
+        "UC" : 300,
+        "R" : 120,
+        "SR" : 80,
+        "SSR" : 40,
+        "UR" : 20,
+        "M" : 9,
+        "L" : 1
     },
 
     "cards": [
@@ -11,8 +16,8 @@
           "set": 0,
           "name": "Slime",
           "rarity": "R",
-          "attack": 5,
-          "defense": 8
+          "attack": 0,
+          "defense": 0
         },
         {
           "id": 2,
