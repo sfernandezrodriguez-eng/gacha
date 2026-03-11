@@ -1,0 +1,50 @@
+{
+    "rarities": {
+        "R": 70,
+        "SR": 25,
+        "SSR": 5
+    },
+
+    "cards": [
+        {
+          "id": 1,
+          "set": 0,
+          "name": "Slime",
+          "rarity": "R",
+          "attack": 5,
+          "defense": 8
+        },
+        {
+          "id": 2,
+          "set": 0,
+          "name": "Goblin",
+          "rarity": "R",
+          "attack": 7,
+          "defense": 6
+        },
+        {
+          "id": 3,
+          "set": 0,
+          "name": "Knight",
+          "rarity": "SR",
+          "attack": 15,
+          "defense": 18
+        },
+        {
+          "id": 4,
+          "set": 0,
+          "name": "Mage",
+          "rarity": "SR",
+          "attack": 20,
+          "defense": 10
+        },
+        {
+          "id": 5,
+          "set": 0,
+          "name": "Dragon",
+          "rarity": "SSR",
+          "attack": 40,
+          "defense": 35
+        }
+    ]
+}

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9b1f197-bf7e-4e1e-b86a-607301cab0e2" name="Changes" comment="usar teclas de flechas para cambiar entre paginas" />
+    <list default="true" id="a9b1f197-bf7e-4e1e-b86a-607301cab0e2" name="Changes" comment="currency_text modificado a money_text">
+      <change afterPath="$PROJECT_DIR$/cards.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards_pool.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gacha.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page2.py" beforeDir="false" afterPath="$PROJECT_DIR$/page2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page3.py" beforeDir="false" afterPath="$PROJECT_DIR$/page3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/stats.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773149969518</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="currency_text modificado a money_text">
+      <option name="closed" value="true" />
+      <created>1773232381490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1773232381490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,6 +169,7 @@
     <MESSAGE value="pantalla en negro" />
     <MESSAGE value="crashea al cambiar de pagina" />
     <MESSAGE value="usar teclas de flechas para cambiar entre paginas" />
-    <option name="LAST_COMMIT_MESSAGE" value="usar teclas de flechas para cambiar entre paginas" />
+    <MESSAGE value="currency_text modificado a money_text" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency_text modificado a money_text" />
   </component>
 </project>

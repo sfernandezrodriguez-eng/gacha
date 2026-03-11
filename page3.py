@@ -1,4 +1,8 @@
 import pygame
+from cards import load_cards
+from pool import get_card_by_id
+
+cards = load_cards()
 
 # Fonts
 big_font = pygame.font.Font(None, 50)
@@ -28,12 +32,13 @@ def draw(screen, game):
     title = font.render("Page 3", True, (255, 255, 255))
     screen.blit(title, (320, 40))
 
-    # Banner
-    banner = pygame.Rect(200, 120, 400, 600)
-    pygame.draw.rect(screen, (60, 60, 90), banner)
+    # Cartas
+    for i, card_data in enumerate(cards):
+        card = get_card_by_id(card_data["id"])
 
-    banner_text = small_font.render("Banner", True, (255, 255, 255))
-    screen.blit(banner_text, (380, 210))
+        text = font.render(card["name"], True, (255, 255, 255))
+
+        screen.blit(text, (100, 100 + i * 40))
 
     # Creacion botones Pagina
         # Color

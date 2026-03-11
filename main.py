@@ -17,6 +17,8 @@ clock = pygame.time.Clock()
 
 game = Game()
 
+last_money_update = pygame.time.get_ticks()
+
 running = True
 current_page = 2
 total_pages = 4
@@ -57,6 +59,13 @@ while running:
 
     handle_events()
 
+
+    current_time = pygame.time.get_ticks()
+
+    if current_time - last_money_update >= 100000:
+        game.currency += 1
+        last_money_update = current_time
+
     if current_page == 1:
         page1.draw(screen, game)
 
@@ -72,5 +81,8 @@ while running:
     pygame.display.update()
     clock.tick(60)
 
+    game.passive_income()
+
 pygame.quit()
+game.save()
 sys.exit()

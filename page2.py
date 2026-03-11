@@ -1,5 +1,8 @@
 import pygame
-
+from cards import add_card
+from gacha import pull_card
+from pool import get_card_by_id
+import random
 
 
 # Buttons
@@ -64,11 +67,30 @@ def handle_events(event, game):
             if game.currency >= 10:
                 game.currency -= 10
                 print("Single pull")
+                card_id, card_set = pull_card()
+
+                add_card(card_id, card_set)
+                card = get_card_by_id(card_id)
+
+                print("You obtained:", card["name"])
+                print("Rarity:", card["rarity"])
+                print("ATK:", card["attack"])
+                print("DEF:", card["defense"])
 
         if pull3_button.collidepoint(event.pos):
             if game.currency >= 30:
                 game.currency -= 30
                 print("Three pull")
+                for x in range(0,3):
+                    card_id, card_set = pull_card()
+
+                    add_card(card_id, card_set)
+                    card = get_card_by_id(card_id)
+
+                    print("You obtained:", card["name"])
+                    print("Rarity:", card["rarity"])
+                    print("ATK:", card["attack"])
+                    print("DEF:", card["defense"])
 
 
 
