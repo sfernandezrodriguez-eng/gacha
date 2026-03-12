@@ -1,6 +1,4 @@
 import pygame
-import card
-from reflex import card
 from cards import load_cards
 from pool import get_card_by_id_set
 
