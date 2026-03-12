@@ -1,0 +1,5 @@
+{
+    "boss" : [
+        { "id": 1, "name": "", "rarity": "C", "attack": 0, "defense": 0, "hp" : 0}
+    ]
+}
